@@ -6,9 +6,6 @@ import requests
 import json
 import csv
 
-# ua=UserAgent()
-# headers={"User-Agent":ua.random}
-# productid = ['35216&productId=5089271','136061&productId=5089275','22778&productId=5475612','7021&productId=6784504']#四种颜色id
 def commentSave(list_comment):
     file = open('JDComment_data.csv','w',newline = '')
     writer = csv.writer(file)
@@ -63,7 +60,12 @@ def getCommentData(maxPage):
 if __name__ == "__main__":
     global list_comment
     ua=UserAgent()
-    headers={"User-Agent":ua.random}
+    # headers={"User-Agent":ua.random}
+    headers = {
+    'Accept': '*/*',
+    "User-Agent":ua.random,
+    'Referer':"https://item.jd.com/100000177760.html#comment"
+    }
     #手机四种颜色对应的产品id参数
     productid = ['35216&productId=5089271','136061&productId=5089275','22778&productId=5475612','7021&productId=6784504']
     list_comment = [[]]
