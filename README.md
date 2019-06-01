@@ -32,12 +32,14 @@
 * BeautifulSoup
 
 ## 使用方法
-
+### 爬取脚本SpiderScript.py
 将文件下载到本地，cmd进入该文件夹
 
 ![1551882088853](https://github.com/YuleZhang/JDComment_Spider/blob/master/picture/Snipaste_2019-03-06_22-22-48.PNG) 
+(注意：在爬取数据之前，尽量确保网络的稳定，这能提高爬虫的效率，爬完所有数据，会存到data目录下的csv文件中)
 
-(注意：在爬取数据之前，尽量确保网络的稳定，这能提高爬虫的效率，爬完所有数据，会存到当前目录下的csv文件中)
+### 数据处理脚本JDComment_Processing.ipynb
+使用Jupyter notebook/lab打开ipynb文件，随后shift+enter逐步执行，即可看到数据处理过程(每个单元格的执行情况)
 
 ## 数据处理
 

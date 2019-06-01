@@ -7,7 +7,7 @@ import json
 import csv
 
 def commentSave(list_comment):
-    file = open('JDComment_data.csv','w',newline = '')
+    file = open('data/JDComment_data.csv','w',newline = '')
     writer = csv.writer(file)
     writer.writerow(['用户ID','评论内容','会员级别','点赞数','回复数','得分','购买时间','手机型号'])
     for i in range(len(list_comment)):
