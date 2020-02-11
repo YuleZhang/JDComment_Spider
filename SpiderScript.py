@@ -5,9 +5,10 @@ import numpy as np
 import requests
 import json
 import csv
+import io
 
 def commentSave(list_comment):
-    file = open('data/JDComment_data.csv','w',newline = '')
+    file = io.open('data/JDComment_data.csv','w',encoding="utf-8",newline = '')
     writer = csv.writer(file)
     writer.writerow(['用户ID','评论内容','购买时间','点赞数','回复数','得分','评价时间','手机型号'])
     for i in range(len(list_comment)):
