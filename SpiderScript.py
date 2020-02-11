@@ -9,7 +9,7 @@ import csv
 def commentSave(list_comment):
     file = open('data/JDComment_data.csv','w',newline = '')
     writer = csv.writer(file)
-    writer.writerow(['用户ID','评论内容','会员级别','点赞数','回复数','得分','购买时间','手机型号'])
+    writer.writerow(['用户ID','评论内容','购买时间','点赞数','回复数','得分','评价时间','手机型号'])
     for i in range(len(list_comment)):
         writer.writerow(list_comment[i])
     file.close()
@@ -35,15 +35,15 @@ def getCommentData(maxPage):
             for j in range(0,pageLen):
                 userId = jsonData['comments'][j]['id']#用户ID
                 content = jsonData['comments'][j]['content']#评论内容
-                levelName = jsonData['comments'][j]['userLevelName']#会员级别
+                boughtTime = jsonData['comments'][j]['referenceTime']#购买时间
                 voteCount = jsonData['comments'][j]['usefulVoteCount']#点赞数
                 replyCount = jsonData['comments'][j]['replyCount']#回复数目
                 starStep = jsonData['comments'][j]['score']#得分
-                creationTime = jsonData['comments'][j]['creationTime']#购买时间
+                creationTime = jsonData['comments'][j]['creationTime']#评价时间
                 referenceName = jsonData['comments'][j]['referenceName']#手机型号
                 sig_comment.append(userId)#每一行数据
                 sig_comment.append(content)
-                sig_comment.append(levelName)
+                sig_comment.append(boughtTime)
                 sig_comment.append(voteCount)
                 sig_comment.append(replyCount)
                 sig_comment.append(starStep)
