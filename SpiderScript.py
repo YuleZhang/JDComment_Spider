@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+from enum import Flag
 from fake_useragent import UserAgent
 from bs4 import BeautifulSoup
 import time
@@ -36,7 +37,7 @@ def getCommentData(format_url,proc,i,maxPage):
         # url = 'https://sclub.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98vv%s&score=%s&sortType=5&page=%s&pageSize=10&isShadowSku=0&fold=1'%(proc,i,cur_page)
         url = format_url.format(proc,i,cur_page) # 给字符串添上参数
         try:
-            response = requests.get(url=url, headers=headers)
+            response = requests.get(url=url, headers=headers, verify=False)
             time.sleep(np.random.rand()*2)
             jsonData = response.text
             startLoc = jsonData.find('{')
@@ -76,8 +77,15 @@ if __name__ == "__main__":
     # 设置访问请求头
     headers = {
     'Accept': '*/*',
+    'Host':"club.jd.com",
     "User-Agent":ua.random,
-    'Referer':"https://item.jd.com/100000177760.html#comment"
+    'Referer':"https://item.jd.com/",
+    'sec-ch-ua':"\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"",
+    'sec-ch-ua-mobile': '?0',
+    'Sec-Fetch-Dest': 'script',
+    'Sec-Fetch-Mode':'no-cors',
+    'Sec-Fetch-Site':'same-site',
+    'cookie':'your cookie'
     }
     #手机四种颜色对应的产品id参数
     productid = ['productId=100006795590','136061&productId=5089275','22778&productId=5475612','7021&productId=6784504']
@@ -93,7 +101,7 @@ if __name__ == "__main__":
             url = format_url.format(proc,i,0)
             print(url)
             try:
-                response = requests.get(url=url, headers=headers)
+                response = requests.get(url=url, headers=headers, verify=False)
                 jsonData = response.text
                 startLoc = jsonData.find('{')
                 jsonData = jsonData[startLoc:-2]

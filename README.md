@@ -1,6 +1,8 @@
 # 京东爬虫
 
-感谢大家的star和fork，为了感谢大家的关注，特意对代码进行了优化，对最新的url格式进行了更新，减少了一些冗余的参数，希望能够帮助大家入门爬虫，同时也希望大家多多关注和支持，你们的**fork**是对我最大的认可，哈哈哈！
+感谢大家的star和fork，为了感谢大家的关注，特意对代码进行了优化，对最新的url格式进行了更新，减少了一些冗余的参数，希望能够帮助大家入门爬虫，已经爬好的京东手机的评论已经存储在data目录下，可以直接用于进一步分析。对项目不熟悉的可以查看[**教程**](https://blog.csdn.net/weixin_42474261/article/details/88354134?spm=1001.2014.3001.5502)。后续会重新封装几个版本，主要是添加多线程、redis缓存等机制提高爬虫效率，同时也将把核心参数打包成json方便使用。
+
+希望你抓取顺利，同时也希望大家多多关注和支持，你们的**fork**是对我最大的认可，哈哈哈！
 
 ## 抓取评论的关键字
 
@@ -34,10 +36,23 @@
 * BeautifulSoup
 
 ## 使用方法
-### 爬取脚本SpiderScript.py
-将文件下载到本地，cmd进入该文件夹
+### Cookie配置
 
-![1551882088853](https://github.com/YuleZhang/JDComment_Spider/blob/master/picture/Snipaste_2019-03-06_22-22-48.PNG) 
+以下图为例，复制控制台中Header请求中的Cookies字段内容，将其替换代码中`'your cookie'`部分，即可批量访问评论信息，有问题请留言。
+
+![image-20210819134514961](picture/image-20210819134514961.png)
+
+
+
+### 爬取脚本SpiderScript.py
+
+将文件下载到本地，cmd进入该文件夹，在配置好Cookie和自己想爬取的商品id后运行
+
+`python SpiderScript.py`
+
+即可执行爬虫脚本，当然也可以通过Pycharm、VS Code等环境直接运行该脚本。
+
+![1551882088853](picture/Snipaste_2019-03-06_22-22-48.PNG) 
 (注意：在爬取数据之前，尽量确保网络的稳定，这能提高爬虫的效率，爬完所有数据，会存到data目录下的csv文件中)
 
 ### 数据处理脚本JDComment_Processing.ipynb
