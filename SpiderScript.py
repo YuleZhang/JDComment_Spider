@@ -64,6 +64,7 @@ def getCommentData(format_url,proc,i,maxPage):
                 sig_comment.append(creationTime)
                 sig_comment.append(referenceName)
                 list_comment.append(sig_comment)
+                print(sig_comment)
                 sig_comment = []
         except:
             time.sleep(5)
@@ -85,7 +86,7 @@ if __name__ == "__main__":
     'Sec-Fetch-Dest': 'script',
     'Sec-Fetch-Mode':'no-cors',
     'Sec-Fetch-Site':'same-site',
-    'cookie':'your cookie'
+    'cookie':'your cookies'
     }
     #手机四种颜色对应的产品id参数
     productid = ['productId=100006795590','136061&productId=5089275','22778&productId=5475612','7021&productId=6784504']

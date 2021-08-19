@@ -28,17 +28,23 @@
 
 ## 前置库
 
+核心库如下
+
 * requests
-* json
 * fake_useragent
-* numpy
-* time
 * BeautifulSoup
 
+在当前目录下的控制台使用以下命令，批量安装上述相关的程序包
+
+```
+pip install -r requirements.txt
+```
+
 ## 使用方法
+
 ### Cookie配置
 
-以下图为例，复制控制台中Header请求中的Cookies字段内容，将其替换代码中`'your cookie'`部分，即可批量访问评论信息，有问题请留言。
+以下图为例，复制控制台中Header请求中的Cookies字段内容，将其替换代码中`'your cookies'`部分，即可批量访问评论信息，有问题请留言。
 
 ![image-20210819134514961](picture/image-20210819134514961.png)
 
