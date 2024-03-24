@@ -24,12 +24,17 @@
 
 ## 前置库
 
+核心库如下
+
 * requests
-* json
 * fake_useragent
-* numpy
-* time
 * BeautifulSoup
+
+在当前目录下的控制台使用以下命令，批量安装上述相关的程序包
+
+```
+pip install -r requirements.txt
+```
 
 ## 使用方法
 
