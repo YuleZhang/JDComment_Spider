@@ -58,19 +58,21 @@ pip install -r requirements.txt
 分析借助柱状图和词云图来展现手机消费时段以及热点评论词，效果如下
 
 时段分析
-![img](picture\手机购买时段.png)
+![img](picture/手机购买时段.png)
 
 词云图
-![img](picture\phoneComment.jpg)
+![img](picture/phoneComment.jpg)
 
 会员分析
-![img](picture\月消费与会员等级分析.png)
+![img](picture/月消费与会员等级分析.png)
 
-## 数据处理
+## 数据处理过程
 
-在JDComment_Processing中包含了数据清洗、数据分析的整个过程（附注释与分析），使用的IDE是jupyter。数据规模有限，分析过程仅供参考。
+![content](./数据库报告.pdf)
 
 ## 声明
+
+如果图片或pdf显示不出来，可以参考[CSDN链接](https://blog.csdn.net/qq_41709370/article/details/106282229)查看，或者直接下载项目，本地查看。
 
 本项目是个人使用而开发，目的纯粹出于个人兴趣和学习，不包含任何商业用途。本人深知创意和知识产权的重要性，因此强调此项目的使用范围仅限于非商业目的。
 
