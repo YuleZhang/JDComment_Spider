@@ -48,7 +48,7 @@ pip install -r requirements.txt
 ### 运行脚本SpiderScript.py
 将文件下载到本地，cmd进入该文件夹
 
-![spider](picture\Snipaste_2019-03-06_22-22-48.PNG) 
+![spider](picture//Snipaste_2019-03-06_22-22-48.PNG) 
 (注意：在爬取数据之前，尽量确保网络的稳定，这能提高爬虫的效率，爬完所有数据，会存到data目录下的csv文件中)
 
 ### 数据分析脚本JDComment_Processing.ipynb
