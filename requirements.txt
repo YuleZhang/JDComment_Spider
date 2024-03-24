@@ -1,0 +1,5 @@
+fake_useragent==0.1.13
+requests
+json
+numpy
+beautifulsoup4

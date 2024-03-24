@@ -71,13 +71,13 @@ def getCommentData(format_url,proc,i,maxPage):
 
 if __name__ == "__main__":
     global list_comment
-    ua=UserAgent()
+    ua=UserAgent(cache=True)
     format_url = 'https://club.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98&{0}&score={1}&sortType=5&page={2}&pageSize=10&isShadowSku=0&fold=1'
     # 设置访问请求头
     headers = {
-    'Accept': '*/*',
-    "User-Agent":ua.random,
-    'Referer':"https://item.jd.com/100000177760.html#comment"
+        'Accept': '*/*',
+        "User-Agent":ua.random,
+        'Host': "club.jd.com"
     }
     #手机四种颜色对应的产品id参数
     productid = ['productId=100006795590','136061&productId=5089275','22778&productId=5475612','7021&productId=6784504']
@@ -95,6 +95,7 @@ if __name__ == "__main__":
             try:
                 response = requests.get(url=url, headers=headers)
                 jsonData = response.text
+                print(jsonData)
                 startLoc = jsonData.find('{')
                 jsonData = jsonData[startLoc:-2]
                 jsonData = json.loads(jsonData)
