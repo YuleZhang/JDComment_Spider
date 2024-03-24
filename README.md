@@ -68,7 +68,7 @@ pip install -r requirements.txt
 
 ## 数据处理过程
 
-![content](./数据库报告.pdf)
+[content](./数据库报告.pdf)
 
 ## 声明
 
