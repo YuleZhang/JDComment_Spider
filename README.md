@@ -58,7 +58,7 @@ pip install -r requirements.txt
 分析借助柱状图和词云图来展现手机消费时段以及热点评论词，效果如下
 
 时段分析
-![img](picture/手机购买时段.png)
+[![img](picture/手机购买时段.png)](https://github.com/YuleZhang/JDComment_Spider/blob/master/picture/%E6%89%8B%E6%9C%BA%E8%B4%AD%E4%B9%B0%E6%97%B6%E6%AE%B5.png)
 
 词云图
 ![img](picture/phoneComment.jpg)
